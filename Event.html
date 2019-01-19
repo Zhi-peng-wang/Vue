@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+
+</head>
+<body>
+<div id="vue-app">
+    <h1> Events </h1>
+    <button @click.once="add(1)">++</button>
+    <button v-on:click="subtract(1)">--</button>
+    <button @dblclick="add(10)">++</button>
+    <button v-on:dblclick="subtract(10)">--</button>
+    <p>my age is {{age}}</p>
+    <div id="canvas" v-on:mousemove="updateXY">
+        {{x}},{{y}}- <span @mousemove.stop="">stop moving</span>
+    </div>
+    <!--阻止时间冒泡相关包装方法-->
+    <a @click.prevent="aa" href="http://www.baidu.com">baidu</a>
+    <script src="js/app-events.js"></script>
+</div>
+</body>
+</html>

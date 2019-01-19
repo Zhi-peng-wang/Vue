@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双向数据绑定</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+
+
+</head>
+<body>
+<div id="vue-app">
+    <h1> 双向数据绑定 /input/select/textarea</h1>
+    <lable>姓名：</lable>
+    <!--ref表示在vue中标记，在js中好进行确认-->
+    <input ref="name" type="text" v-on:keyup="logName">
+    <span>{{name}}</span>
+    <lable>年龄：</lable>
+    <input ref="age" type="text" v-on:keyup="logAge">
+    <span>{{age}}</span>
+</div>
+<script src="js/ShuangXiangShuJuBangDing.js"></script>
+</body>
+</html>

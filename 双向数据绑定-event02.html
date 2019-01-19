@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双向数据绑定</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+
+
+</head>
+<body>
+<div id="vue-app">
+    <h1> 双向数据绑定 /input/select/textarea</h1>
+    <lable>姓名：</lable>
+    <!--ref表示在vue中标记，在js中好进行确认-->
+    <!--采用指令进行绑定,此处的name是js中数据的name，你想要显示的效果-->
+    <!--v-model的工作流程：1.先绑定了当前js中name属性，如果js中属性有相应的属性值则默认就会有值
+                            所以称为双向绑定
+    -->
+    <input ref="name" type="text" v-model="name">
+    <span>{{name}}</span>
+    <lable>年龄：</lable>
+    <input ref="age" type="text" v-model="age">
+    <span>{{age}}</span>
+</div>
+<script src="js/ShuangXiangShuJuBangDing.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="vue-app">
+        <h1> 键盘 events</h1>
+        <lable>姓名：</lable>
+        <input type="text" v-on:keyup.enter="logName">
+        <lable>年龄：</lable>
+        <input type="text" v-on:keyup.alt.enter="logAge">
+    </div>
+    <script src="js/mouse-event.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue动态绑定css样式</title>
+    <script src="js/vue.js"></script>
+    <link rel="stylesheet" href="css/vue-动态绑定css.css">
+
+
+</head>
+<body>
+<div id="vue-app">
+    <h1> 动态 CSS Class</h1>
+    <!--绑定class c-bind:class="{类名：true/false}"  true 表示有这个类 false表示没有这个类-->
+    <h2 > 示例1 </h2>
+    <!--解释v-bian:class部分，绑定添加类，true才能将类添加上否则不能，前一个事类名，后一个是属性值-->
+    <div v-on:click="changeColor=!changeColor" v-bind:class="{changeColor:changeColor}">
+        <span>王志鹏</span>
+    </div>
+
+    <h2> 示例2 </h2>
+    <button v-on:click="changeColor=!changeColor">dianji</button>
+    <button v-on:click="changeLength=!changeLength">dianji</button>
+    <div  v-bind:class="compClass">
+        <span>王志鹏</span>
+    </div>
+</div>
+<script src="js/动态绑定css样式.js"></script>
+</body>
+</html>
