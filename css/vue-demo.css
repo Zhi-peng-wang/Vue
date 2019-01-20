@@ -1,0 +1,28 @@
+#bag{
+    width: 200px;
+    height: 500px;
+    border: 1px solid black;
+    margin: 0 auto;
+    background: url("../img/houtai.jpg") center no-repeat;
+    background-size: 85%;
+}
+#bag.brust{
+    background-image: url("../img/qianduan.jpg");
+}
+#bag-health{
+    width: 200px;
+    border: 2px solid black;
+    margin: 0 auto 20px auto;
+}
+
+#bag-health div{
+    height: 20px;
+    background: crimson;
+}
+#controls{
+    width: 200px;
+    margin: 0 auto;
+}
+#controls button{
+    margin-left: 25px;
+}
