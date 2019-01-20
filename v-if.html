@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <title>v-if 条件</title>
     <script src="js/vue.js"></script>
-
-</head>
 <body>
 <div id="vue-app">
     <h1> v-if 条件</h1>
     <button v-on:click="error=!error">显示错误</button>
-    <button v-on:click="sucess=!sucess">显示成功</button>
+    <button v-on:click="success=!success">显示成功</button>
+    <!--<p v-if="error">网络连接错误：404</p>-->
+    <!--<p v-else-if="success">网络连接成功：200</p>-->
+
+    <p v-show="error">网络连接错误：404</p>
+    <p v-show="success">网络连接成功：200</p>
 </div>
+<script src="js/v-if.js"></script>
 </body>
 </html>
