@@ -1,27 +1,38 @@
 <template>
   <div class="users">
     <ul>
-      <li v-for="user in users" v-on:click="user.show=!user.show">
+      <li v-for="user in u" v-on:click="user.show=!user.show">
         <h2>{{user.name}}</h2>
         <h3 v-show="user.show">{{user.position}}</h3>
       </li>
     </ul>
+    <button v-on:click="deleteUser">删除</button>
   </div>
 </template>
-
+<!--
+     传值：string, number, boolean
+     引用：array，object
+-->
 <script>
   export default {
     name:"users",
+    // props:["u"],  不是官方文档的写法
+    props:{
+      u:{
+        //类型为数组
+        type:Array,
+        //是否规整
+        required:true
+      }
+    },
     data(){
       return{
-        users:[
-          {name:"hery",position:"web项目开发",show:false},
-          {name:"hery",position:"web项目开发",show:false},
-          {name:"hery",position:"web项目开发",show:false},
-          {name:"hery",position:"web项目开发",show:false},
-          {name:"hery",position:"web项目开发",show:false},
-          {name:"hery",position:"web项目开发",show:false},
-        ]
+
+      }
+    },
+    methods:{
+      deleteUser:function () {
+        this.u.pop();
       }
     }
   }

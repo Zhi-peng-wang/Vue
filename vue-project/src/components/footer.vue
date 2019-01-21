@@ -1,12 +1,17 @@
 <template>
   <footer>
-    <p>{{bootom}}</p>
+    <p>{{bootom}}{{title}}</p>
   </footer>
 </template>
 
 <script>
   export default {
     name: 'app-footer',
+    props:{
+      title: {
+        type:String
+      }
+    },
     data () {
       return {
         bootom:"footer 2019 vue Demo"
